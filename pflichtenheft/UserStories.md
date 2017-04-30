@@ -25,3 +25,5 @@
 | Nutzer | Sets anderer Nutzer bewerten können | andere Nutzer diese Bewertung einsehen können | Sets sind bewertet |
 | Nutzer | Sets anderer Nutzer kommentieren können | andere Nutzer diesen Kommentar lesen können | Sets sind kommentiert |
 | Nutzer | Sets anderer Nutzer nach Bewertungen, Namen und Tags filtern können | die Ergebnisse gefiltert sind | Ergebnisse wurden gefiltert |
+
+Die Einträge mit ** werden im Rahmen des Projekts für das Modul Rich Client Application nicht umgesetzt. Sie wurden hier lediglich für die Vollständigkeit aufgelistet.
