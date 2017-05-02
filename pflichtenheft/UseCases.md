@@ -1,4 +1,4 @@
 ## Use Cases
-![Showcase 1](UseCases/Allgemein.png?raw=true)
-![Showcase 2](UseCases/Einstellungen.png?raw=true)
-![Showcase 3](UseCases/Store.png?raw=true)
+![Showcase 1](img/UseCases/Allgemein.png?raw=true)
+![Showcase 2](img/UseCases/Einstellungen.png?raw=true)
+![Showcase 3](img/UseCases/Store.png?raw=true)
