@@ -14,6 +14,15 @@
 ## Login
 ![Showcase 1](img/Mockups/Login.png)
 
+## Profil Sets
+![Showcase 1](img/Mockups/Profil_Sets.png)
+
+## Profil Feed
+![Showcase 1](img/Mockups/Profil_Feed.png)
+
+## Profil Follower
+![Showcase 1](img/Mockups/Profil_Follower.png)
+
 ## Karteikarten-Set
 ![Showcase 1](img/Mockups/Karteikarte.png)
 
