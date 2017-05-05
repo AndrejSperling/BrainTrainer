@@ -1,32 +1,32 @@
 # Datenmodell
 
-## Karteikarte
+## Notecard
 
 | fieldname | type |
 | :--- | :---- |
-|  id | Object ID |
-| titel | string |
-| aufgabe | string |
-| antwort | string |
-| owner | Object Nutzer id |
-| lastchange | Datetime |
-| typ | int --- |
+|  id | Object id |
+| title | string |
+| task | string |
+| answer | string |
+| owner | Object profile id |
+| lastchange | datetime |
+| type | int --- |
 | photourl | string --- |
 
 ## Set
 
 | fieldname | type |
 | :--- | :---- |
-|  id | Object ID |
-| Karteikarten | Array: Object Karteikarte id |
+|  id | Object id |
+| notecard | Array: Object notecard id |
 | tags | Array: string |
-| bewertungen | Array: Object Bewertung id |
-| owner | Object Nutzer id |
+| valuations | Array: Object valuation id |
+| owner | Object profile id |
 | lastchange | Datetime |
 | visibility | int --- |
 | photourl | string |
 
-## Profil
+## Profile
 
 | fieldname | type |
 | :--- | :---- |
@@ -34,26 +34,26 @@
 | email | string |
 | oauthtoken | string |
 | photourl | string |
-| follower | Array: Object Nutzer id |
+| follower | Array: Object profile id |
 | visibility | int --- |
 | Sets | Array: Object Set id |
 
-## Bewertung
+## Valuation
 
 | fieldname | type |
 | :--- | :---- |
 |  id | Object ID |
 | score | int |
-| kommentar | string |
-| Nutzer | Object Nutzer id |
+| comment | string |
+| profile | Object profile id |
 | createdAt | datetime |
 
-## Statistik
+## Statistic
 
 | fieldname | type |
 | :--- | :---- |
 |  id | Object ID |
-| Nutzer | Object Nutzer |
-| Karteikarte | Object Karteikarte |
-| erfolgreich | int |
-| AnzahlVersuche | int |
+| profile | Object profile id |
+| notecard | Object notecard id |
+| successful | int |
+| tries | int |
