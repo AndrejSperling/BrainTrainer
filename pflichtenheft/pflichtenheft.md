@@ -1,15 +1,15 @@
 # Pflichtenheft - Brain Trainer
 ## Inhaltsverzeichnis
-1. [User Stories]()
-2. [Use Cases]()
-3. [GUI-Mockups]()
-4. [Systemarchitektur]()
-5. [Datenmodell]()
-6. [Zielbestimmung]()
-7. [Produkteinsatz]()
+1. [User Stories](#user-stories)
+2. [Use Cases](#use-cases)
+3. [GUI-Mockups](#gui-mockups)
+4. [Systemarchitektur](#systemarchitektur)
+5. [Datenmodell](#datenmodell)
+6. [Zielbestimmung](#zielbestimmung)
+7. [Produkteinsatz](#produkteinsatz)
 
 
-## 1. User Stories
+## 1. User Stories<a name="user-stories"></a>
 ### 1.1 Lokal
 | Ich als | möchte | so dass | Akzeptanz |
 | :------ | :----- | :------ | :-------- |
@@ -59,12 +59,12 @@
 
 Die Einträge mit ** werden im Rahmen des Projekts für das Modul Rich Client Application nicht umgesetzt. Sie wurden hier lediglich für die Vollständigkeit aufgelistet.
 
-## 2. Use Cases
+## 2. Use Cases<a name="use-cases"></a>
 ![Showcase 1](img/UseCases/Allgemein.png?raw=true)
 ![Showcase 2](img/UseCases/Einstellungen.png?raw=true)
 ![Showcase 3](img/UseCases/Online.png?raw=true)
 
-## 3. Mockups
+## 3. GUI-Mockups<a name="gui-mockups"></a>
 ### 3.1 Startseite
 ![Showcase 1](img/Mockups/Startseite.png)
 
@@ -113,10 +113,10 @@ Die Einträge mit ** werden im Rahmen des Projekts für das Modul Rich Client Ap
 ### 3.16 User Dropdown
 ![Showcase 1](img/Mockups/Userdropdown.png)
 
-## 4 Systemarchitektur
+## 4 Systemarchitektur<a name="systemarchitektur"></a>
 ![Showcase 1](img/SysArch.png)
 
-## 5 Datenmodell
+## 5 Datenmodell<a name="datenmodell"></a>
 
 ### 5.1 Notecard
 
@@ -182,7 +182,7 @@ Die Einträge mit ** werden im Rahmen des Projekts für das Modul Rich Client Ap
 |  id | Object id |
 | name | string |
 
-## 6 Zielbestimmung
+## 6 Zielbestimmung<a name="zielbestimmung"></a>
 
 ### 6.1 Musskriterien
 
@@ -212,7 +212,7 @@ Die Einträge mit ** werden im Rahmen des Projekts für das Modul Rich Client Ap
 - Nutzer können die Art des Pop-Ups auswählen
 - Nutzer können Sets mit Hilfe einer URL beschränkt veröffentlichen (protected)
 
-## 7 Produkteinsatz
+## 7 Produkteinsatz<a name="produkteinsatz"></a>
 
 ### 7.1 Anwendungsbereiche
 
