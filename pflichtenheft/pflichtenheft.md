@@ -128,8 +128,7 @@ Die Einträge mit ** werden im Rahmen des Projekts für das Modul Rich Client Ap
 | answer | string |
 | owner | Object profile id |
 | lastchange | datetime |
-| type | int --- |
-| photourl | string --- |
+| type | Object notecardtype id |
 
 ### 5.2 Set
 
@@ -141,26 +140,26 @@ Die Einträge mit ** werden im Rahmen des Projekts für das Modul Rich Client Ap
 | valuations | Array: Object valuation id |
 | owner | Object profile id |
 | lastchange | Datetime |
-| visibility | int --- |
+| visibility | boolean |
 | photourl | string |
 
 ### 5.3 Profile
 
 | fieldname | type |
 | :--- | :---- |
-|  id --- | Object ID |
+|  id | Object id |
 | email | string |
 | oauthtoken | string |
 | photourl | string |
 | follower | Array: Object profile id |
-| visibility | int --- |
-| Sets | Array: Object Set id |
+| visibility | boolean |
+| sets | Array: Object Set id |
 
 ### 5.4 Valuation
 
 | fieldname | type |
 | :--- | :---- |
-|  id | Object ID |
+|  id | Object id |
 | score | int |
 | comment | string |
 | profile | Object profile id |
@@ -170,11 +169,18 @@ Die Einträge mit ** werden im Rahmen des Projekts für das Modul Rich Client Ap
 
 | fieldname | type |
 | :--- | :---- |
-|  id | Object ID |
+|  id | Object id |
 | profile | Object profile id |
 | notecard | Object notecard id |
-| successful | int |
-| tries | int |
+| successfultries | int |
+| Totaltries | int |
+
+### 5.6 Notecardtype
+
+| fieldname | type |
+| :--- | :---- |
+|  id | Object id |
+| name | string |
 
 ## 6 Zielbestimmung
 
