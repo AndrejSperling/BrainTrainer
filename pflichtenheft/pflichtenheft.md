@@ -202,7 +202,10 @@ Die Einträge mit ** werden im Rahmen des Projekts für das Modul Rich Client Ap
 
 #### Nicht-Funktionale Anforderungen:
 
-- Nutzer erhalten Vorschläge zu beliebten Sets?
+- soll nicht zu aufdringlich sein
+- gutes Design
+- Benutzerfreundlichkeit
+- Offline Verfügbarkeit
 
 ### 6.2 Wunschkriterien
 
