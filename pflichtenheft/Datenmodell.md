@@ -1,4 +1,4 @@
-Datenmodell
+# Datenmodell
 
 ## Karteikarte
 
@@ -8,51 +8,44 @@ Datenmodell
 | titel | string |
 | aufgabe | string |
 | antwort | string |
-| owner | Object Nutzer |
+| owner | Object Nutzer id |
 | lastchange | Datetime |
-| typ | int |
-| photourl | string |
+| typ | int --- |
+| photourl | string --- |
 
 ## Set
 
 | fieldname | type |
 | :--- | :---- |
 |  id | Object ID |
-| Karteikarten | Array: Object Karteikarte |
-| tags | Array: Object tag |
-| bewertungen | Array: Object Bewertung |
-| owner | Object Nutzer |
+| Karteikarten | Array: Object Karteikarte id |
+| tags | Array: string |
+| bewertungen | Array: Object Bewertung id |
+| owner | Object Nutzer id |
 | lastchange | Datetime |
-| visibility | int |
+| visibility | int --- |
 | photourl | string |
 
-## Nutzer
+## Profil
 
 | fieldname | type |
 | :--- | :---- |
-|  id | Object ID |
+|  id --- | Object ID |
 | email | string |
-| token | string |
+| oauthtoken | string |
 | photourl | string |
-| customID | int |
-| follower | Array: Object Nutzer |
-| profileVisibility | int |
+| follower | Array: Object Nutzer id |
+| visibility | int --- |
+| Sets | Array: Object Set id |
 
-## tag
-
-| fieldname | type |
-| :--- | :---- |
-|  id | Object ID |
-| name | string |
-
-## bewertung
+## Bewertung
 
 | fieldname | type |
 | :--- | :---- |
 |  id | Object ID |
 | score | int |
-| beschreibung | string |
-| Nutzer | Object Nutzer |
+| kommentar | string |
+| Nutzer | Object Nutzer id |
 | createdAt | datetime |
 
 ## Statistik
@@ -62,5 +55,5 @@ Datenmodell
 |  id | Object ID |
 | Nutzer | Object Nutzer |
 | Karteikarte | Object Karteikarte |
-| falscheAntworten | int |
+| erfolgreich | int |
 | AnzahlVersuche | int |
