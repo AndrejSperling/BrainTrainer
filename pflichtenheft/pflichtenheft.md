@@ -200,7 +200,6 @@ Die Einträge mit ** werden im Rahmen des Projekts für das Modul Rich Client Ap
 - soll nicht zu aufdringlich sein
 - gutes Design
 - Benutzerfreundlichkeit
-- Offline Verfügbarkeit
 
 ### 6.2 Wunschkriterien
 
@@ -238,3 +237,16 @@ Da das Electron Framework verwendet wird und es sich hierbei um eine webbasierte
       Windows – Intel Pentium 4 und 512 MB RAM
       Mac – 64 Bit Intel Prozessor
       Linux – Intel Pentium 4 Prozessor
+
+
+## 8 Rollen
+
+ Frontend: Andrej Sperling, Markus Wiebe
+
+ Backend: Thomas Wiens
+
+ Datenbank: Christian Saßmann
+
+ ## 9 Projektplan
+
+ ![Showcase 1](img/Projektplan/Projektplan.png?raw=true)
