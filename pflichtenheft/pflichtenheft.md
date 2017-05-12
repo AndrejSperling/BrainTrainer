@@ -10,7 +10,6 @@
 
 
 ## 1. User Stories<a name="user-stories"></a>
-### 1.1 Lokal
 | Ich als | möchte | so dass | Akzeptanz |
 | :------ | :----- | :------ | :-------- |
 | Nutzer | Übungen erhalten | ich die Karteikarten wiederholen kann | Eine Übung wurde als Pop-Up gestartet |
@@ -31,11 +30,7 @@
 | ** Nutzer | die Art des Pop-Ups auswählen können | dies auf meine Bedürfnisse abgestimmt ist | Art des Pop-Ups wurde angepasst |
 | Nutzer | die Anwendung im Tray sehen können | ich direkt darauf zugreifen kann | Anwendung wird im Tray angezeigt |
 | Nutzer | die Anwendung aus dem Tray heraus maximieren können | die Anwendung im Fenster dargestellt wird | Anwendung wird als Fenster angezeigt |
-| ** Nutzer | Statistiken anschauen | ich die Statistiken anschauen kann | Die Statistiken wurden angeschaut | 
-
-### 1.2 Online
-| Ich als | möchte | so dass | Akzeptanz |
-| :------ | :----- | :------ | :-------- |
+| ** Nutzer | Statistiken anschauen | ich die Statistiken anschauen kann | Die Statistiken wurden angeschaut |
 | Nutzer | mich mit meinem Profil anmelden können | ich die Online Features nutzen kann | Benutzer hat Zugriff auf die Online Features |
 | Nutzer | mich von meinem Profil abmelden können | ich abgemeldet bin | Benutzer ist abgemeldet |
 | Nutzer | mein Profil als Privat deklarieren | andere Profile meine Abonnenten und meinen Feed sehen können | Meine Abonnenten und mein Feed wird anderen Profilen angezeigt |
