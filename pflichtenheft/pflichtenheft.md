@@ -7,6 +7,8 @@
 5. [Datenmodell](#datenmodell)
 6. [Zielbestimmung](#zielbestimmung)
 7. [Produkteinsatz](#produkteinsatz)
+8. [Rollen](#rollen)
+9. [Projektplan](#projektplan)
 
 
 ## 1. User Stories<a name="user-stories"></a>
@@ -239,7 +241,7 @@ Da das Electron Framework verwendet wird und es sich hierbei um eine webbasierte
       Linux – Intel Pentium 4 Prozessor
 
 
-## 8 Rollen
+## 8 Rollen<a name="rollen"></a>
 
  Frontend: Andrej Sperling, Markus Wiebe
 
@@ -247,6 +249,6 @@ Da das Electron Framework verwendet wird und es sich hierbei um eine webbasierte
 
  Datenbank: Christian Saßmann
 
- ## 9 Projektplan
+ ## 9 Projektplan<a name="projektplan"></a>
 
  ![Showcase 1](img/Projektplan/Projektplan.png?raw=true)
