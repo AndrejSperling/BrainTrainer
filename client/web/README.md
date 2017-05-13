@@ -4,6 +4,13 @@
 $ npm install
 ```
 
+### Run
+
+```sh
+$ npm run web
+```
+Anschließend über `http://localhost:8000` zu erreichen
+
 ### Build
 
 ```sh

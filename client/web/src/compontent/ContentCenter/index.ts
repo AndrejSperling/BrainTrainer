@@ -1,7 +1,9 @@
-import {button, DOMSource} from "@cycle/dom";
+import {br, button, div, DOMSource} from "@cycle/dom";
 import {Stream} from "xstream";
 import {VNode} from "snabbdom/vnode";
 import {Sinks as MainSinks} from "../../main";
+import {ElectronPopup, execOnElectron, isElectron} from "../../common/ElectronBridge";
+import {h} from "snabbdom/h";
 
 export type Sources = {
     DOM: DOMSource,
@@ -12,22 +14,47 @@ export type Sinks = {
 
 function intent(dom) {
     return {
-        click$: dom.select('.center-content').events('click')
+        click$: dom.select('.center-content').events('click'),
+        clickPopup$: dom.select('.electron-popup').events('click')
     };
 }
 
+var count = 0;
+
 function model(intent) {
+
     return {
-        click$: intent.click$.map(stream => {
-            alert("CenterContent!");
+        click$: intent.clickPopup$.map(stream => {
+
+            if (isElectron()) {
+                execOnElectron({
+                    type: 'popup',
+                    data: {
+                        lectionId: count++
+                    }
+                } as ElectronPopup);
+            }
+
             return stream;
         }).startWith('')
+
     }
 }
 
 function view(model) {
-    return model.click$.map(j =>
-        button('.center-content', ['Center Knopf']))
+    return model.click$.map(j => {
+
+        const electronBtn = (isElectron()) ? button('.electron-popup', ['Popup anzeigen (nur von Electron sichtbar)']) : null;
+
+        return div([
+            button('.center-content', ['Center Knopf']),
+            h('br'),
+            h('br'),
+            h('br'),
+            h('br'),
+            electronBtn
+        ])
+    })
 }
 
 function CenterContent(sources: Sources): MainSinks {

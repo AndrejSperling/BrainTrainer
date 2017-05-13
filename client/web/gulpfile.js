@@ -1,11 +1,8 @@
-var argv = require('yargs').argv;
-var gulp = require('gulp');
-var gulpif = require('gulp-if');
-var uglify = require('gulp-uglify');
-var util = require('gulp-util');
-const shell = require('gulp-shell');
-const _ = require('underscore');
-const mkdirp = require('mkdirp');
+var gulp        = require('gulp');
+var util        = require('gulp-util');
+const shell     = require('gulp-shell');
+const _         = require('underscore');
+const mkdirp    = require('mkdirp');
 
 var dependencies = [
     // Example: '@angular/**/*.js',
@@ -23,12 +20,12 @@ const folders = [
 
 gulp.task("modules", function () {
     return gulp.src(modules, {cwd: "node_modules/**"})
-        .pipe(gulp.dest("./build/node_modules/"));
+        .pipe(gulp.dest("./public/node_modules/"));
 });
 
 gulp.task("libs", function () {
     return gulp.src(dependencies, {cwd: "node_modules/**"})
-        .pipe(gulp.dest("./build/libs/"));
+        .pipe(gulp.dest("./public/libs/"));
 });
 
 gulp.task("make-folders", function () {
