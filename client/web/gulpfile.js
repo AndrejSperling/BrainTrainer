@@ -1,8 +1,8 @@
-var gulp        = require('gulp');
-var util        = require('gulp-util');
-const shell     = require('gulp-shell');
-const _         = require('underscore');
-const mkdirp    = require('mkdirp');
+var gulp = require('gulp');
+var util = require('gulp-util');
+const shell = require('gulp-shell');
+const _ = require('underscore');
+const mkdirp = require('mkdirp');
 
 var dependencies = [
     // Example: '@angular/**/*.js',
@@ -43,6 +43,11 @@ gulp.task("bundle", ["make-folders"], function () {
         .pipe(shell(['browserify ./lib/main.js --outfile=./public/src/js/bundle.js']))
 });
 
+gulp.task("images", function () {
+    return gulp.src('./src/sources/img/**/*')
+        .pipe(gulp.dest('./public/src/img/'));
+});
+
 gulp.task("styles", function () {
     const stylus = require('gulp-stylus');
     return gulp.src('./src/sources/css/*.styl')
@@ -55,10 +60,12 @@ gulp.task("templates", function () {
         .pipe(gulp.dest('./public/'));
 });
 
-gulp.task("views", ["styles", "templates"]);
+gulp.task("views", ["styles", "templates", "images"]);
 gulp.task("build", ["views", "bundle"]);
 
 gulp.task("watch", ["views"], function () {
     gulp.watch("./lib/**/*", ["bundle"]);
     gulp.watch("./sources/**/*", ["views"])
+    gulp.watch("./sources/css/*.styl", ["views"])
+    gulp.watch("./sources/templates/*.html", ["views"])
 });

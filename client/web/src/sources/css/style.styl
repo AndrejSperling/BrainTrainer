@@ -1,3 +1,219 @@
-.left, .right, .center
-  float:left;
-  width:33%;
+$mobileBreakpoint            = 320px;
+$tabletBreakpoint            = 768px;
+$computerBreakpoint          = 992px;
+$largeMonitorBreakpoint      = 1200px;
+$widescreenMonitorBreakpoint = 1920px;
+
+.toc
+  position: relative;
+  z-index: 1;
+  width: 200px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  float: left;
+  flex: 0 0 auto;
+
+.full.height
+  /*min-width: 800px;
+  width: auto !important;
+  width: 800px;*/
+  min-width: $mobileBreakpoint;
+
+.border-less
+  border: none !important;
+  border-width: 0 0 0 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+.sidebar-menu
+  .menu
+    padding: 25px !important;
+
+    .item
+      font-size: 16px !important;
+
+.logo-container
+  text-align: left;
+  padding: 0 0 0 15px;
+
+.masthead.segment {
+  position: relative;
+  z-index: 3;
+  margin: 0em;
+  min-height: 185px;
+  padding: 3em 0em;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #DDDDDD;
+  box-shadow: none;
+}
+
+.article {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0px;
+}
+
+.full.height > .toc {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  width: 200px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.pusher > .full.height {
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.masthead > .container::after {
+  content: '';
+  display: block;
+  height: 0px;
+  clear: both;
+  visibility: hidden;
+}
+
+.masthead > .container {
+  margin-right: 387px !important;
+}
+
+.masthead > .container > .right.rail,
+.masthead > .container > .tab > .examples > .right.rail,
+.masthead > .container > .tab > .right.rail {
+  margin-left: 3em;
+  padding-top: 2em;
+  width: 319px;
+}
+
+.main.container::after {
+  content: '';
+  display: block;
+  height: 0px;
+  clear: both;
+  visibility: hidden;
+}
+
+.main.container {
+  margin-right: 387px !important;
+}
+
+.masthead > .container, .main.container, .fixed.menu > .container {
+  margin-left: 3em !important;
+  margin-right: 3em !important;
+  width: auto !important;
+  /*max-width: 960px !important;*/
+}
+
+.fixed.menu > .container, .main.container, .masthead > .container, .footer > .container {
+  position: relative;
+}
+
+.main.container {
+  margin-right: 268px !important;
+}
+
+.main.container > .right.rail,
+.main.container > .tab > .examples > .right.rail,
+.main.container > .tab > .right.rail {
+  margin-left: 3em;
+  padding-top: 2em;
+  width: 200px;
+}
+
+.article .ui.right.dividing.rail {
+  border-left: none;
+}
+
+@media screen and (min-width: 1145px)
+  .fixed.main.menu
+    display: none;
+
+@media screen and (max-width: 1144px)
+  .full.height > .toc {
+    display none
+  }
+
+  .main.supermain.container > .rail {
+    display none
+  }
+
+  .main.supermain {
+    margin-right: 3em !important;
+  }
+
+@media screen and (max-width: 1272px)
+  .full.height > .toc {
+    width 200px
+  }
+
+@media screen and (max-width: 1144px)
+
+  .main.mainhead
+    margin-top:3em
+    margin-right: 120px !important;
+
+  .main.container.mainhead > .rail
+    width 80px
+    margin-left 0 !important
+    padding-left 0 !important
+
+
+.masonry.grid {
+    display: block;
+  }
+
+
+
+
+@media only screen and (min-width: $tabletBreakpoint) {
+  .masonry.grid {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+  }
+
+  .ui.doubling.masonry.grid[class*="three column"] > .column {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: $computerBreakpoint) {
+  .masonry.grid {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+
+
+@media only screen and (min-width: $largeMonitorBreakpoint) {
+  .masonry.grid {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+  }
+}
+
+@media only screen and (min-width: $widescreenMonitorBreakpoint) {
+  .masonry.grid {
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    column-count: 5;
+  }
+}
