@@ -3,25 +3,36 @@ $tabletBreakpoint = 768px
 $computerBreakpoint = 992px
 $largeMonitorBreakpoint = 1200px
 $wideScreenMonitorBreakpoint = 1920px
-$sidebarWidth = 210px
 
 $mobileSpace = 25px;
 $tabletSpace = 25px;
 $computerSpace = 25px;
 
+$spaceBetween = 25px;
+$sidebarWidth = 200px;
+
 body {
-  padding: 0px
+  padding: 0
 }
 
-#app .toc {
-  position: relative;
-  z-index: 1;
-  width: $sidebarWidth;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 auto;
-  -ms-flex: 0 0 auto;
-  float: left;
-  flex: 0 0 auto;
+#app {
+
+  padding $spaceBetween* 0.75 $spaceBetween*0.5 $spaceBetween* 0.75 $spaceBetween*0.5
+
+  .toc {
+    position: relative;
+    z-index: 1;
+    width: $sidebarWidth;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    float: left;
+    flex: 0 0 auto;
+  }
+
+  .ui.menu {
+    margin: 0
+  }
 }
 
 .pusher > .full.height {
@@ -68,13 +79,17 @@ body {
 
 #main-menu {
 
+  margin-left: $spaceBetween !important
+
   .ui.vertical.menu {
     width 14rem
   }
 
-  .menu {
-    padding: 25px !important
+  .ui.secondary.menu {
+    margin 0
+  }
 
+  .menu {
     .item {
       font-size: 16px !important
     }
@@ -85,6 +100,16 @@ body {
     padding: 0 0 0 15px;
   }
 
+}
+
+remify(value) { /* separate mixin, so it can be used elsewhere */
+  u = unit(value);
+
+  if (u is 'px') {
+    return unit(value / 16, 'em')
+  } else {
+    return unit(value, u)
+  }
 }
 
 .content-row {
@@ -101,17 +126,16 @@ body {
 
   &.container {
 
-    margin-left: 3em !important;
+    margin-left: $spaceBetween !important;
     width: auto !important;
   //max-width: 960px !important;
-    margin-right: 268px !important;
+    margin-right: $spaceBetween* 2 + $sidebarWidth !important;
 
     & > .right.rail,
     & > .tab > .examples > .right.rail,
     & > .tab > .right.rail {
-      margin-left: 3em;
-      padding-top: 2em;
-      width: 200px;
+      margin-left: $spaceBetween;
+      width: $sidebarWidth;
     }
   }
 }
@@ -120,7 +144,7 @@ body {
 
   @media screen and (max-width: 1144px) {
     & {
-      margin-top: 3em
+      margin-top: $spaceBetween
       margin-right: 120px !important;
     }
 
@@ -136,15 +160,23 @@ body {
 
     .alarm-icon {
       padding-bottom: 15px;
+      opacity 0.3
 
       .icon {
         font-size: 18px;
+        margin-top -3px
+        margin-right 0
       }
     }
 
+    .alarm-icon:hover{
+      background none
+      opacity 1
+    }
+
     .avatar {
-      height: 32px;
-      width: 32px;
+      height: 40px;
+      width: 40px;
       max-height: none;
     }
   }
@@ -153,13 +185,29 @@ body {
 
   }
 
+  .menu.no-space-right > .item,
+  .menu .avatar{
+    margin-right 0
+    padding-right 0
+  }
+
+
 }
 
-#content-right {
-  //margin-left 0 !important;
-  padding-left 0 !important
+#content{
+  padding-top $spaceBetween*0.5
+}
 
-  .new-set-btn{
+#content-left{
+  //padding-top $spaceBetween*0.5
+}
+
+
+#content-right {
+  padding-left 0 !important
+  padding-top $spaceBetween*0.5
+
+  .new-set-btn {
     display block
     width 100%
   }
@@ -189,7 +237,7 @@ body {
   }
 
   #content {
-    margin-right: 3em !important;
+    margin-right: $spaceBetween !important;
   }
 
 @media screen and (max-width: 1272px)
