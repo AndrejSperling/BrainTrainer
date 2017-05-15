@@ -17,7 +17,7 @@ body {
 
 #app {
 
-  padding $spaceBetween* 0.75 $spaceBetween*0.5 $spaceBetween* 0.75 $spaceBetween*0.5
+  padding $spaceBetween* 0.75 $spaceBetween* 0.5 $spaceBetween* 0.75 $spaceBetween* 0.5
 
   .toc {
     position: relative;
@@ -138,24 +138,48 @@ remify(value) { /* separate mixin, so it can be used elsewhere */
       width: $sidebarWidth;
     }
   }
-}
 
-#masthead {
-
-  @media screen and (max-width: 1144px) {
-    & {
-      margin-top: $spaceBetween
-      margin-right: 120px !important;
-    }
-
-    & > .rail {
-      width 80px
-      margin-left 0 !important
-      padding-left 0 !important
+  @media screen and (min-width: $mobileBreakpoint) and (max-width: $largeMonitorBreakpoint) {
+    &.container {
+      margin-right: 0 !important;
     }
   }
+}
 
-  #masthead-right {
+.content-row-flexible {
+
+  position: relative;
+
+  .container::after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  &.container {
+
+    margin-left: $spaceBetween !important;
+    width: auto !important;
+  //max-width: 960px !important;
+    margin-right: $spaceBetween* 2 + $sidebarWidth !important;
+
+    & > .right.rail,
+    & > .tab > .examples > .right.rail,
+    & > .tab > .right.rail {
+      margin-left: $spaceBetween;
+      width: $sidebarWidth;
+    }
+
+  }
+
+  .left-col {
+    margin-left $spaceBetween
+  }
+
+  .col-right {
+  //width $sidebarWidth
     padding-top: 0 !important;
 
     .alarm-icon {
@@ -169,16 +193,53 @@ remify(value) { /* separate mixin, so it can be used elsewhere */
       }
     }
 
-    .alarm-icon:hover{
+    .alarm-icon:hover {
       background none
       opacity 1
     }
 
     .avatar {
-      height: 40px;
-      width: 40px;
-      max-height: none;
+      height: 40px !important
+      width: 40px !important
+      max-height: none !important
     }
+  }
+
+// TODO noch die richtige weite einstellen
+  $tabletUserSpace = 120px;
+  @media screen and (min-width: $mobileBreakpoint) and (max-width: $largeMonitorBreakpoint) {
+    &.container {
+      margin-right: $tabletUserSpace+$spaceBetween !important;
+    }
+
+
+    .col-right {
+      margin-left 0 !important
+      padding-left 0 !important
+      background: #ff0000 !important;
+      width $tabletUserSpace !important;
+    }
+  }
+
+}
+
+#masthead {
+
+  @media screen and (max-width: 1144px) {
+    & {
+      margin-top: $spaceBetween
+    //margin-right: 120px !important;
+    }
+
+    & > .rail {
+      width 80px
+      margin-left 0 !important
+      padding-left 0 !important
+    }
+  }
+
+  #masthead-right {
+
   }
 
   #masthead-left {
@@ -186,26 +247,24 @@ remify(value) { /* separate mixin, so it can be used elsewhere */
   }
 
   .menu.no-space-right > .item,
-  .menu .avatar{
+  .menu .avatar {
     margin-right 0
     padding-right 0
   }
 
-
 }
 
-#content{
-  padding-top $spaceBetween*0.5
+#content {
+  padding-top $spaceBetween* 0.5
 }
 
-#content-left{
-  //padding-top $spaceBetween*0.5
+#content-left {
+//padding-top $spaceBetween*0.5
 }
-
 
 #content-right {
   padding-left 0 !important
-  padding-top $spaceBetween*0.5
+  padding-top $spaceBetween* 0.5
 
   .new-set-btn {
     display block
