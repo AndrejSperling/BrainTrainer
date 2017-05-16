@@ -18,6 +18,7 @@ body {
 #app {
 
   padding $spaceBetween* 0.75 $spaceBetween* 0.5 $spaceBetween* 0.75 $spaceBetween* 0.5
+  min-width 480px !important
 
   .toc {
     position: relative;
@@ -185,6 +186,7 @@ remify(value) { /* separate mixin, so it can be used elsewhere */
     .alarm-icon {
       padding-bottom: 15px;
       opacity 0.3
+      background none !important
 
       .icon {
         font-size: 18px;
@@ -199,42 +201,59 @@ remify(value) { /* separate mixin, so it can be used elsewhere */
     }
 
     .avatar {
-      height: 40px !important
-      width: 40px !important
+      height: 32px !important
+      width: 32px !important
       max-height: none !important
     }
+
+    .menu.right .item {
+      padding-top 0 !important
+      padding-bottom 0 !important
+    }
+
   }
 
 // TODO noch die richtige weite einstellen
-  $tabletUserSpace = 120px;
+  $tabletUserSpace = 90px;
   @media screen and (min-width: $mobileBreakpoint) and (max-width: $largeMonitorBreakpoint) {
     &.container {
       margin-right: $tabletUserSpace+$spaceBetween !important;
     }
 
-
     .col-right {
       margin-left 0 !important
       padding-left 0 !important
-      background: #ff0000 !important;
-      width $tabletUserSpace !important;
+      width $tabletUserSpace+$spaceBetween !important;
     }
   }
 
 }
 
+#search input {
+  color #333 !important
+  text-align left !important
+}
+
 #masthead {
 
   @media screen and (max-width: 1144px) {
-    & {
-      margin-top: $spaceBetween
-    //margin-right: 120px !important;
-    }
-
     & > .rail {
       width 80px
       margin-left 0 !important
       padding-left 0 !important
+    }
+
+  }
+
+  @media screen and (max-width: $tabletBreakpoint) {
+    .menu-icon {
+      display block;
+    }
+  }
+
+  @media screen and (min-width: $largeMonitorBreakpoint) {
+    .menu-icon {
+      display none;
     }
   }
 
@@ -250,6 +269,10 @@ remify(value) { /* separate mixin, so it can be used elsewhere */
   .menu .avatar {
     margin-right 0
     padding-right 0
+  }
+
+  &.ui.container {
+    width: auto !important;
   }
 
 }
@@ -297,6 +320,10 @@ remify(value) { /* separate mixin, so it can be used elsewhere */
 
   #content {
     margin-right: $spaceBetween !important;
+  }
+
+  #masthead {
+    margin-right: $spaceBetween !important
   }
 
 @media screen and (max-width: 1272px)
